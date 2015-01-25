@@ -17,7 +17,7 @@
                 <div class="col-md-4">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h4>XSS Cross Site Scripting</h4>
+							<h4>Cross-Site Scripting (XSS)</h4>
 						</div>
 						<div class="panel-body">
 							<p>Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted web sites. XSS attacks occur when an attacker uses a web application to send malicious code.</p>

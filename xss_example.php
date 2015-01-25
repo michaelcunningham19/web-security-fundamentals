@@ -21,7 +21,7 @@ if (isset($_POST['message'])) {
 	$stmt_add->execute();
 	
 	// prevent accidental resubmission via refresh
-	header('Location: xss_example.php');
+	header('Location: /cross-site-scripting/example');
 }
 
 // fetch all posts
@@ -44,7 +44,7 @@ $stmt = $pdo->query('SELECT * FROM xss');
 		<hr>
 		<br><br>
 		<h3>Add a new post!</h3>
-		<form action="xss_example.php" method="post">
+		<form action="/cross-site-scripting/example" method="post">
 			<textarea name="message" rows="4" cols="50"></textarea><br>
 			<button type="submit">Submit</button>
 
