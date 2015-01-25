@@ -12,7 +12,6 @@ require('cfg.filesystem.php');
  * @return output string - the parsed markup from the template file
  *
  */
-
 function getTemplate($file, $isHeader = false, $title = '') {
     
     $file = TPL_DIR . $file . TPL_EXT;
