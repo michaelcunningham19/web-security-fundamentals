@@ -36,7 +36,7 @@
 							<p>A SQL injection attack consists of insertion or "injection" of a SQL query via the input data from the client to the application.</p>
 						</div>
 						<div class="panel-footer">
-							<p><a class="btn btn-default disabled" href="#" role="button">View demonstration &raquo;</a></p>
+							<p><a class="btn btn-default" href="/sql-injection" role="button">View demonstration &raquo;</a></p>
 						</div>
 					</div>
                 </div>

@@ -27,6 +27,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^cross-site-scripting$			/xss.php [L,NC]
 RewriteRule ^cross-site-scripting/example$	/xss_example.php [L,NC]
 RewriteRule ^sql-injection$					/sqlinjection.php [L,NC]
+RewriteRule ^sql-injection/example$			/sqlinjection_example.php [L,NC]
 RewriteRule ^full-path-disclosure$			/fpd.php [L,NC]
 RewriteRule ^arbitrary-code-execution$		/ace.php [L,NC]
 RewriteRule ^denial-of-service$				/dos.php [L,NC]
