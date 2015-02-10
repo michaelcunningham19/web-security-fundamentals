@@ -49,7 +49,7 @@
 							<p>Full Path Disclosure (FPD) vulnerabilities enable the attacker to see the path to the webroot/file.</p>
 						</div>
 						<div class="panel-footer">
-							<p><a class="btn btn-default disabled" href="#" role="button">View demonstration &raquo;</a></p>
+							<p><a class="btn btn-default" href="/full-path-disclosure" role="button">View demonstration &raquo;</a></p>
 						</div>
 					</div>
                 </div>

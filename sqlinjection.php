@@ -152,10 +152,10 @@ You input the following into the username and password fields: ' or ''=' and bec
 				
 				<pre>
 					<code class="php">
-                        $stmt = $dbh->prepare("SELECT * FROM " . TABLE_NAME . " WHERE username = :username AND password = :password");
-                        $stmt->bindParam(':username', $username, PDO::PARAM_STR);
-                        $stmt->bindParam(':password', $password, PDO::PARAM_STR);
-                        $stmt->execute();
+$stmt = $dbh->prepare("SELECT * FROM " . TABLE_NAME . " WHERE username = :username AND password = :password");
+$stmt->bindParam(':username', $username, PDO::PARAM_STR);
+$stmt->bindParam(':password', $password, PDO::PARAM_STR);
+$stmt->execute();
 					</code>
 				</pre>
 				

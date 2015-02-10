@@ -3,7 +3,7 @@
 #  *
 #  * @type    - Global
 #  * @author  - Michael Cunningham
-#  * @date    - January 25th 2014
+#  * @date    - February 10th 2014
 #  * @version - 1.0
 #  *
 #  */
@@ -29,6 +29,7 @@ RewriteRule ^cross-site-scripting/example$	/xss_example.php [L,NC]
 RewriteRule ^sql-injection$					/sqlinjection.php [L,NC]
 RewriteRule ^sql-injection/example$			/sqlinjection_example.php [L,NC]
 RewriteRule ^full-path-disclosure$			/fpd.php [L,NC]
+RewriteRule ^full-path-disclosure/example$  /fpd_example.php [L,NC]
 RewriteRule ^arbitrary-code-execution$		/ace.php [L,NC]
 RewriteRule ^denial-of-service$				/dos.php [L,NC]
 RewriteRule ^cross-site-request-forgery$	/csrf.php [L,NC]
