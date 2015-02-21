@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Example dummy config file which is used for the Full Path Disclosure vulnerability example
+ * Example dummy config file which is used for vulnerability examples
  *
  */
 
