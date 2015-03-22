@@ -29,22 +29,20 @@
 					<code class="php">
 &lt;?php
 
-	// -------------------- password hashing salts
-	define('SALT1', '53653@##@$');
-	define('SALT2', '^%#+-%$ABf');
+    // -------------------- password hashing salts
+    define('SALT1', '53653@##@$');
+    define('SALT2', '^%#+-%$ABf');
 
-	// -------------------------------------------------------------------------------------------- begin logic
+    // -------------------- define the table used throughout this example
+    define('TABLE_NAME', 'sqlinjection');
 
-	// define the table used throughout this example
-	define('TABLE_NAME', 'sqlinjection');
+    // -------------------- database variables
+    $hostname  = 'localhost';  	  // MySQL server location
+    $username  = 'root';          // username for connecting to database
+    $password  = '';              // password to connect to database
+    $database  = 'selfdirected';  // the database name itself
 
-	// -------------------- database variables
-	$hostname  = 'localhost';  	  // MySQL server location
-	$username  = 'root';          // username for connecting to database
-	$password  = '';              // password to connect to database
-	$database  = 'selfdirected';  // the database name itself
-
-	// connect to the database
+    // connect to the database
     $con = mysqli_connect($hostname, $username, $password, $database);
 
     // Check connection
@@ -52,12 +50,12 @@
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
 
-	// declare that by default, the user is not logged in... this example will not use cookies
-	$isAdmin = false;
-	$_SESSION['isAdmin'] = false;
+    // declare that by default, the user is not logged in... this example will not use cookies
+    $isAdmin = false;
+    $_SESSION['isAdmin'] = false;
 
-	// if there is something posted.. that means a login attempt was made
-	if (!empty($_POST)) {
+    // if there is something posted.. that means a login attempt was made
+    if (!empty($_POST)) {
         
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -68,16 +66,16 @@
         $sql = "SELECT * FROM " . TABLE_NAME . " WHERE username ='" . $username . "' AND password ='" . $password . "'";
 		
         $res     = mysqli_query($con, $sql);
-		$row_cnt = mysqli_num_rows($res);
-        
-		if ($row_cnt > 0) {
-			
-			$isAdmin = true;
-			$_SESSION['isAdmin'] = true;
-			
-		}
+        $row_cnt = mysqli_num_rows($res);
+
+        if ($row_cnt > 0) {
+
+            $isAdmin = true;
+            $_SESSION['isAdmin'] = true;
+
+        }
 		
-	}
+    }
 
 ?&gt;
 					</code>
