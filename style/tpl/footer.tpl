@@ -1,7 +1,14 @@
         <hr>
 
-        <footer>
-			<p><a href="http://michael-cunningham.ca">Michael Cunningham</a> - 2015</p>
+        <footer class="small">
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <p><a href="http://michael-cunningham.ca">Michael Cunningham</a> - 2015</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+                </div>
+            </div>
         </footer>
     </div>
     <!-- /container -->
