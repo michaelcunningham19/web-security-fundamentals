@@ -62,7 +62,7 @@ Volume in drive X is External Volume Serial Number is 4608-825D Directory of X:\
 					</code>
 				</pre>
                 
-                <strong>config.php</strong> is really interesting looking... I bet it has database passwords. change the GET variable to <strong>type%20includes\config.php</strong>
+                <strong>config.php</strong> is really interesting looking... I bet it has database passwords. Go ahead an change the GET variable to <strong>type%20includes\config.php</strong>
                 
                 You recieved a blank page.. what if you view the page source?
 				<h4>Super secret secure information :D</h4>
