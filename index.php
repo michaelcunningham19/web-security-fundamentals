@@ -131,7 +131,7 @@
 							<p>Local File Inclusion (also known as LFI) is the process of including files, that are already locally present on the server, through the exploiting of vulnerable inclusion procedures implemented in the application.</p>
 						</div>
 						<div class="panel-footer">
-							<p><a class="btn btn-default disabled" href="/local-file-inclusion" role="button">View demonstration &raquo;</a></p>
+							<p><a class="btn btn-default" href="/local-file-inclusion" role="button">View demonstration &raquo;</a></p>
 						</div>
 					</div>
                 </div>
