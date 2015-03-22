@@ -48,7 +48,7 @@ Warning: file_get_contents(X:\xampp\htdocs\web-security-fundamentals\test.php): 
 					</code>
 				</pre>
 				
-                Noticing from the error message, we found the full path where this website resides. In this case the website exists in "X:\xampp\htdocs\web-security-fundamentals", now, with this information we can guess where a configuration file would reside in the structure. Typically PHP developers will put configuration files either in the root of the site, or in an 'includes' folder. Ket's try messing with the 'page' GET variable by changing it to 'includes/config'. Notice how I did not include a file extension because in the PHP error message I noticed that the script appended '.php' directly to 'test'.
+                Noticing from the error message, we found the full path where this website resides. In this case the website exists in "X:\xampp\htdocs\web-security-fundamentals", now, with this information we can guess where a configuration file would reside in the structure. Typically PHP developers will put configuration files either in the root of the site, or in an 'includes' folder. Let's try messing with the 'page' GET variable by changing it to 'includes/config'. Notice how I did not include a file extension because in the PHP error message I noticed that the script appended '.php' directly to 'test'.
                 
 				<h4>Guessing a configuration file path</h4>
 				<pre>
