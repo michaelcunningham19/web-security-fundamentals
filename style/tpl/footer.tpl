@@ -22,8 +22,8 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/style/js/ie10-viewport-bug-workaround.min.js"></script>
 
-	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 
 </html>
