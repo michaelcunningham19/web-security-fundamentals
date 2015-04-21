@@ -14,15 +14,24 @@
     <!-- /container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="/assets/js/jquery.min.js"></script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/style/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/style/js/ie10-viewport-bug-workaround.min.js"></script>
+    <script>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014 Twitter, Inc.
+         * Licensed under the Creative Commons Attribution 3.0 Unported License. For
+         * details, see http://creativecommons.org/licenses/by/3.0/.
+         */
+        !function(){"use strict";if(navigator.userAgent.match(/IEMobile\/10\.0/)){var e=document.createElement("style");e.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.querySelector("head").appendChild(e)}}();
+    </script>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <!-- Syntax Highlighting -->
+    <script src="/assets/js/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </body>
 

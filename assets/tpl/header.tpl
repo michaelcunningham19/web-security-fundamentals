@@ -5,21 +5,20 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>%TITLE% - Michael Cunningham - ICOM 3010 - Self Directed Studies</title>
+	<title>%TITLE% - Michael Cunningham - ICOM 3010 - Self-Directed Studies</title>
 
 	<!-- Bootstrap -->
-	<link href="/style/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/style/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="/style/css/custom.min.css" rel="stylesheet">
+	<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/css/custom.min.css" rel="stylesheet">
 	
 	<!-- Syntax Highlighting -->
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+	<link href="/assets/css/hljs.default.min.css" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="/assets/js/html5shiv.min.js"></script>
+      <script src="/assets/js/respond.min.js"></script>
     <![endif]-->
 </head>
 
@@ -34,7 +33,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="http://websec.michael-cunningham.ca">Michael Cunningham: Self Directed Studies</a>
+				<a class="navbar-brand" href="/">Michael Cunningham: Self-Directed Studies</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar">

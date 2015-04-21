@@ -146,7 +146,7 @@
 							<p>Remote File Include (RFI) is an attack technique used to exploit "dynamic file include" mechanisms in web applications. When web applications take user input (URL, parameter value, etc.) and pass them into file include commands, the web application might be tricked into including remote files with malicious code.</p>
 						</div>
 						<div class="panel-footer">
-							<p><a class="btn btn-default disabled" href="/remote-file-inclusion" role="button">View demonstration &raquo;</a></p>
+							<p><a class="btn btn-default" href="/remote-file-inclusion" role="button">View demonstration &raquo;</a></p>
 						</div>
 					</div>
                 </div>
@@ -159,7 +159,7 @@
 							<p>In computer security and programming, a buffer overflow, or buffer overrun, is an anomaly where a program, while writing data to a buffer, overruns the buffer's boundary and overwrites adjacent memory. This is a special case of violation of memory safety.</p>
 						</div>
 						<div class="panel-footer">
-							<p><a class="btn btn-default disabled" href="/buffer-overflow" role="button">View demonstration &raquo;</a></p>
+							<p><a class="btn btn-default" href="/buffer-overflow" role="button">View demonstration &raquo;</a></p>
 						</div>
 					</div>
                 </div>

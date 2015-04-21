@@ -39,9 +39,11 @@ RewriteRule ^malware-distribution$  		  /malware.php [L,NC]
 RewriteRule ^local-file-inclusion$			  /lfi.php [L,NC]
 RewriteRule ^local-file-inclusion/example$    /lfi_example.php [L,NC]
 RewriteRule ^remote-file-inclusion$			  /rfi.php [L,NC]
+RewriteRule ^remote-file-inclusion/example$   /rfi_example.php [L,NC]
 RewriteRule ^memory-corruption$               /mc.php [L,NC]
 RewriteRule ^memory-corruption/example$       /mc_example.php [L,NC]
 RewriteRule ^buffer-overflow$				  /bufferoverflow.php [L,NC]
+RewriteRule ^buffer-overflow/example$         /bufferoverflow_example.php [L,NC]
 
 # --- Global :: Get rid of the trailing slash...
 RewriteRule ^(.+)/$ /$1 [L,R=301]
