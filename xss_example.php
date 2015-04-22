@@ -28,13 +28,23 @@ if (isset($_POST['message'])) {
 $stmt = $pdo->query('SELECT * FROM xss');
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>XSS Example</title>
 	<!-- Bootstrap -->
-	<link href="/style/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+      <script src="/assets/js/html5shiv.min.js"></script>
+      <script src="/assets/js/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 	
@@ -57,7 +67,7 @@ $stmt = $pdo->query('SELECT * FROM xss');
 		<hr>
 
 		<?php if ($stmt->rowCount() > 0) { ?>
-		<?php while($row = $stmt->fetch()) { ?>
+		<?php while ($row = $stmt->fetch()) { ?>
 		<span>Post ID: <?php echo $row['postID']; ?></span><br>
 		<span>Post Content: 
 			<?php echo $row['message']; ?>
@@ -71,13 +81,21 @@ $stmt = $pdo->query('SELECT * FROM xss');
 	</div>
 	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="/assets/js/jquery.min.js"></script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/style/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/style/js/ie10-viewport-bug-workaround.min.js"></script>
+    <script>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014 Twitter, Inc.
+         * Licensed under the Creative Commons Attribution 3.0 Unported License. For
+         * details, see http://creativecommons.org/licenses/by/3.0/.
+         */
+        !function(){"use strict";if(navigator.userAgent.match(/IEMobile\/10\.0/)){var e=document.createElement("style");e.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.querySelector("head").appendChild(e)}}();
+    </script>
 	
 </body>
 </html>

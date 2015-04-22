@@ -17,7 +17,7 @@ function getTemplate($file, $isHeader = false, $title = '') {
     $file = TPL_DIR . $file . TPL_EXT;
 	
 	// fetch html template and parse inner php
-	ob_start('ob_gzhandler');
+	ob_start();
 	include($file);
 	$output = ob_get_contents();
 	ob_end_clean();

@@ -30,7 +30,7 @@
 &lt;?php
 
     if (isset($_GET['page'])) {
-        echo file_get_contents(getcwd() . '\\' . $_GET['page'] . '.php');
+        echo file_get_contents(getcwd() . '/' . $_GET['page'] . '.php');
     } else {
         echo 'Please enter a GET page value, or click here for a example: <a href="/full-path-disclosure/example?page=test">Click me! :)</a>';   
     }
@@ -54,7 +54,7 @@ Warning: file_get_contents(X:\xampp\htdocs\web-security-fundamentals\test.php): 
 				<pre>
 					<code class="php">
 						<?php echo htmlentities('
-http://web.sec/full-path-disclosure/example?page=includes\config
+http://web.sec/full-path-disclosure/example?page=includes/config
 						'); ?>
 					</code>
 				</pre>

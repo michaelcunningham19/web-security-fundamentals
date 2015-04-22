@@ -22,25 +22,19 @@
 				<h2>Bypassing User Login</h2>
 				<span>This tutorial will show how to bypass the login screen for an insecure PHP application :)</span>
 				<br><br><br>
-				<span>See the example login screen: <a href="/sql-injection/example" target="_blank">Example Login Screen</a></span>
+				<span>See the example login screen: <a href="/sql-injection/example" target="_blank">Example Login Screen <span class="glyphicon glyphicon-new-window"></span></a></span>
 				<br><br>
 				<h4>PHP</h4>
 				<pre>
 					<code class="php">
 &lt;?php
 
-    // -------------------- password hashing salts
-    define('SALT1', '53653@##@$');
-    define('SALT2', '^%#+-%$ABf');
-
-    // -------------------- define the table used throughout this example
-    define('TABLE_NAME', 'sqlinjection');
-
     // -------------------- database variables
     $hostname  = 'localhost';  	  // MySQL server location
     $username  = 'root';          // username for connecting to database
     $password  = '';              // password to connect to database
     $database  = 'selfdirected';  // the database name itself
+    $tablename = 'sqlinjection';  // the table in the database
 
     // connect to the database
     $con = mysqli_connect($hostname, $username, $password, $database);
@@ -56,15 +50,15 @@
 
     // if there is something posted.. that means a login attempt was made
     if (!empty($_POST)) {
-        
+
         $username = $_POST['username'];
         $password = $_POST['password'];
-        
+
         // username: ' or ''='
         // password: ' or ''='
-        
-        $sql = "SELECT * FROM " . TABLE_NAME . " WHERE username ='" . $username . "' AND password ='" . $password . "'";
-		
+
+        $sql = "SELECT userID FROM " . $tablename . " WHERE username ='" . $username . "' AND password ='" . $password . "'";
+
         $res     = mysqli_query($con, $sql);
         $row_cnt = mysqli_num_rows($res);
 
@@ -74,7 +68,7 @@
             $_SESSION['isAdmin'] = true;
 
         }
-		
+
     }
 
 ?&gt;
@@ -87,41 +81,60 @@
 						<?php echo htmlentities('
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>SQL Injection</title>
-	<!-- Bootstrap -->
-	<link href="/style/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/style/css/login.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SQL Injection</title>
+    <!-- Bootstrap -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/login.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn\'t work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="/assets/js/html5shiv.min.js"></script>
+      <script src="/assets/js/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 	
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-6 col-md-4 col-md-offset-4">
-				<div class="account-wall">
-					<div id="my-tab-content" class="tab-content">
-						<div class="tab-pane active" id="login">
-							<img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120" alt="">
-							<form class="form-signin" action="/sql-injection/example" method="post">
-								<input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
-								<input type="password" name="password" class="form-control" placeholder="Password" required>
-								<input type="submit" class="btn btn-lg btn-default btn-block" value="Sign In">
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-4">
+                <div class="account-wall">
+                    <div id="my-tab-content" class="tab-content">
+                        <div class="tab-pane active" id="login">
+                            <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120" alt="">
+                            <form class="form-signin" action="/sql-injection/example" method="post">
+                                <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
+                                <input type="password" name="password" class="form-control" placeholder="Password" required>
+                                <input type="submit" class="btn btn-lg btn-default btn-block" value="Sign In">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 	
-    <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap\'s JavaScript plugins) -->
+    <script src="/assets/js/jquery.min.js"></script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/style/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/style/js/ie10-viewport-bug-workaround.min.js"></script>
+    <script>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014 Twitter, Inc.
+         * Licensed under the Creative Commons Attribution 3.0 Unported License. For
+         * details, see http://creativecommons.org/licenses/by/3.0/.
+         */
+        !function(){"use strict";if(navigator.userAgent.match(/IEMobile\/10\.0/)){var e=document.createElement("style");e.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.querySelector("head").appendChild(e)}}();
+    </script>
 	
 </body>
 </html>
@@ -138,7 +151,7 @@
                     </div>
                     
                     <div class="col-md-6">
-You input the following into the username and password fields: ' or ''=' and because the SQL statement is simply concatenated POST variables with no sanitization, MySQL will always return true on the '=' statement.
+You input the following into the username and password fields: <code>' or ''='</code> and because the SQL statement is simply concatenated POST variables with no sanitization, MySQL will always return true on the <code>'='</code> statement.
                     </div>
                     
                 </div>
@@ -150,10 +163,14 @@ You input the following into the username and password fields: ' or ''=' and bec
 				
 				<pre>
 					<code class="php">
+...
+
 $stmt = $dbh->prepare("SELECT * FROM " . TABLE_NAME . " WHERE username = :username AND password = :password");
 $stmt->bindParam(':username', $username, PDO::PARAM_STR);
 $stmt->bindParam(':password', $password, PDO::PARAM_STR);
 $stmt->execute();
+
+...
 					</code>
 				</pre>
 				
